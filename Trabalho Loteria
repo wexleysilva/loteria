@@ -1,0 +1,297 @@
+programa
+{
+	inclua biblioteca Util
+	
+     inteiro lista[100]
+	
+	funcao inicio()
+	{
+		
+		inteiro escolhaAposta
+		inteiro dezenas, minimo, maximo, numSorteios
+		escreva("Escolha uma aposta \n 1 Mega-Sena \n 2 Quina \n 3 Lotomania \n 4 Lotofácil \n")
+          leia (escolhaAposta)
+          
+		escolha(escolhaAposta)
+		{
+			caso 1:
+				escreva("O jogo escolhido foi \"Mega-Sena\"")
+
+				escreva("\n agora escreva quantos sorteios você deseja  ")
+				leia(numSorteios)
+				
+				mega(numSorteios)
+			pare
+
+			
+			caso 2:
+				escreva("O jogo escolhido foi \"Quina\"")
+				maximo = 80
+	
+				escreva("\n agora escreva quantos sorteios você deseja  ")
+				
+				leia(numSorteios)
+					
+				quina(numSorteios)
+			
+			pare
+			
+			
+			caso 3:
+				escreva("O jogo escolhido foi \"Lotomania\"")
+				maximo = 50
+			
+			escreva("\n agora escreva quantos sorteios você deseja  ")
+				
+				leia(numSorteios)
+					
+				lotomania(numSorteios)
+			
+			pare
+			
+			caso 4:
+				escreva("O jogo escolhido foi \"Lotofácil\"")
+				maximo = 25
+				
+				escreva("\n agora escreva quantos sorteios você deseja  ")	
+
+				leia(numSorteios)
+				lotofacil(numSorteios)
+				
+				pare
+			
+		}
+	}
+
+	funcao mega(inteiro numSorteios) {
+
+		//real PRECOS[???] = {4.50, 
+
+		inteiro dezenas
+		
+		inteiro minimo = 1
+		inteiro maximo = 60
+
+		escreva("\n agora escreva o número de dezenas ")
+		leia(dezenas)
+
+		enquanto (dezenas < 6 ou dezenas > 20){
+			escreva("\n valor incorreto! \n Escolha valor entre 6 a 20 ")
+			leia(dezenas)
+			
+			
+		}
+			se(dezenas == 6)
+			escreva ("O custo é de R$ 4,50")
+			se(dezenas == 7)
+		escreva ("O custo é de R$ 31,50")
+		se(dezenas == 8)
+		escreva ("O custo é de R$ 126,00")
+		se(dezenas == 9)
+		escreva ("O custo é de R$ 378,00")
+		se(dezenas == 10)
+		escreva ("O custo é de R$ 945,00")
+		se(dezenas == 11)
+		escreva ("O custo é de R$ 2.079,00")
+		se(dezenas == 12)
+		escreva ("O custo é de R$ 4.158,00")
+		se(dezenas == 13)
+		escreva ("O custo é de R$ 7.722,00")
+		se(dezenas == 14)
+		escreva ("O custo é de R$ 13.513,50")
+		se(dezenas == 15)
+		escreva ("O custo é de R$ 22.522,50")
+		se(dezenas == 16)
+		escreva ("O custo é de R$ 36.036,00")
+		se(dezenas == 17)
+		escreva ("O custo é de R$ 55.692,00")
+		se(dezenas == 18)
+		escreva ("O custo é de R$ 83.538,00")
+		se(dezenas == 19)
+		escreva ("O custo é de R$ 122.094,00")
+		se(dezenas == 20)
+		escreva ("O custo é de R$ 174.420,00")
+		
+		
+
+	sorteiaDezenas(dezenas, maximo, numSorteios)
+		
+	}
+
+	funcao quina(inteiro numSorteios){
+		
+		inteiro dezenas
+		
+		inteiro minimo = 1
+		inteiro maximo = 80
+
+		escreva("\n agora escreva o número de dezenas ")
+		leia(dezenas)
+
+		enquanto (dezenas < 5 ou dezenas > 15){
+			escreva("\n valor incorreto! \n Escolha valor entre 5 a 15 ")
+			leia(dezenas)		
+		}
+
+		se(dezenas == 5)
+		escreva ("O custo é de R$ 2,00")
+		se(dezenas == 6)
+		escreva ("O custo é de R$ 12,00")
+		se(dezenas == 7)
+		escreva ("O custo é de R$ 42,00")
+		se(dezenas == 8)
+		escreva ("O custo é de R$ 112,00")
+		se(dezenas == 9)
+		escreva ("O custo é de R$ 252,00")
+		se(dezenas == 10)
+		escreva ("O custo é de R$ 504,00")
+		se(dezenas == 11)
+		escreva ("O custo é de R$ 504,00")
+		se(dezenas == 12)
+		escreva ("O custo é de R$ 1.584,00")
+		se(dezenas == 13)
+		escreva ("O custo é de R$ 2.574,00")
+		se(dezenas == 14)
+		escreva ("O custo é de R$ 4.004,00")
+		se(dezenas == 15)
+		escreva ("O custo é de R$ 6.006,00")
+		
+			
+		
+		
+		sorteiaDezenas(dezenas, maximo, numSorteios)
+
+	}
+
+	
+	
+	funcao lotomania (inteiro numSorteios){
+		
+		inteiro dezenas
+		
+		inteiro minimo = 50
+		inteiro maximo = 50
+
+		escreva("\n agora escreva o número de dezenas ")
+		leia(dezenas)
+
+		enquanto (dezenas < 50 ou dezenas > 50){
+			escreva("\n valor incorreto! \n Escolha valor entre 50 ")
+			leia(dezenas)		
+		}
+	
+	
+	
+	se(dezenas == 50)
+		escreva ("O custo é de R$ 2,50")
+	sorteiaDezenas(dezenas, maximo, numSorteios)
+	
+	
+	}
+	
+	
+
+
+	funcao lotofacil (inteiro numSorteios){
+		
+		inteiro dezenas
+		
+		inteiro minimo = 1
+		inteiro maximo = 25
+
+		escreva("\n agora escreva o número de dezenas ")
+		leia(dezenas)
+
+		enquanto (dezenas < 15 ou dezenas > 20){
+			escreva("\n valor incorreto! \n Escolha valor entre 15 e 20 ")
+			leia(dezenas)		
+
+			
+		}
+
+
+		se(dezenas == 15)
+		escreva ("O custo é de R$ 2,50")
+		se(dezenas == 16)
+		escreva ("O custo é de R$ 40,00")
+		se(dezenas == 17)
+		escreva ("O custo é de R$ 340,00")
+		se(dezenas == 18)
+		escreva ("O custo é de R$ 2.040,00")
+		se(dezenas == 19)
+		escreva ("O custo é de R$ 9.690,00")
+		se(dezenas == 20)
+		escreva ("O custo é de R$ 38.760,00")
+
+		
+	sorteiaDezenas(dezenas, maximo, numSorteios)
+
+
+
+
+	}
+	
+	funcao sorteiaDezenas(inteiro dezenas, inteiro maximo, inteiro numSorteios){
+		
+		inteiro sorteado
+		
+		para(inteiro i=0; i < numSorteios; i++){
+
+			escreva("\n\nsorteio numero ", i+1, "\n")
+
+			para(inteiro j = 0; j < dezenas ;j++){
+				sorteado = sorteia(1, maximo)
+
+				//antes de guardar na lista, verificar se o numero já nao está lá
+
+				para(inteiro l=0; l < dezenas; l++){
+					se(sorteado == lista[l]){
+						escreva("\n***o numero ", sorteado, "ja está na lista\n")
+					
+				
+
+					
+					}
+				}
+				
+				lista[j] = sorteado
+				//Util.aguarde(1000)
+			}
+
+			ordenarLista(dezenas)
+			mostraLista(dezenas)
+		}
+
+		
+		
+	}
+
+
+
+	funcao ordenarLista(inteiro qntdDezenas){
+
+		inteiro aux
+
+		para(inteiro j=0; j < qntdDezenas - 1; j++){
+
+			para(inteiro i=0; i < qntdDezenas - 1 - j; i++){
+				se(lista[i] > lista[i+1]){
+					aux = lista[i]
+					lista[i] = lista[i+1]
+					lista[i+1] = aux
+				}
+			}
+
+		}
+	}
+
+	funcao mostraLista(inteiro dezenas){
+		
+		para(inteiro i=0; i < dezenas; i++){
+			escreva(lista[i], " - ")
+		}
+	
+	}
+	
+	
+}
